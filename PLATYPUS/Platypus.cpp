@@ -116,7 +116,7 @@ void Platypus::print(ostream &out)const {
 
 	out << "Name: " << name << endl;
 	out << "Gender: " << gender << endl;
-	out << "Age: " << age << endl;
+	out << "Age: " << age <<" months"<< endl;
 	out << "Weight: " << weight << endl;
 	
 
@@ -155,7 +155,7 @@ void Platypus::age_me() {
 
 //2% შანსი იმისა რომ ობიექტი შესაძლოა გახდეს მუტანტი.
 //10 და მეტ კილოიანი იხნისკარტას სიკვდილის ალბათობა 100%-ია.
-	chance = (rand() % 50) + 1;
+	chance = (rand() % 100) + 1;
 	if (chance == 2) {
 		mutant = 1;
 		cout << "Platypus has mutanted! " << endl;
@@ -214,8 +214,8 @@ void Platypus::eat() {
 		return;
 	}
 	//რანდომულად 1-50 შუალედში
-	float chance = (rand() % 50) + 1;
-	chance = chance / 1000;
+	float chance = (rand() % 5) + 1;
+	chance = chance / 100;
 	weight = (weight*chance) + weight;
 	cout << "New weight is : " << weight << endl;
 
